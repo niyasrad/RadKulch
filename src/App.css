@@ -1,38 +1,204 @@
-.App {
-  text-align: center;
+*{
+    margin:0;
+    padding:0;
+    transition: all 0.5s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+    scroll-behavior: smooth;
 }
+body{
+    height: 100%;
+    overflow: hidden;
+}
+.screen{
+    height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+    overflow: hidden;
+}
+#display{
+    display: none;
+}
+.bar{
+    z-index: 999;
+    position: absolute;
+    top: 200px;
+    height: 40px;
+    padding-left: 15px;
+    left:0;
+    right:0;
+    margin:auto;
+    max-width:504px;
+    border: 1px solid white;
+    border-radius:85px;
+    background:#f2f2f2;
+    background:#ffffff;
+    box-shadow: -27px -27px 61px #ffffff,27px 27px 61px #cfcfcf;    
+}
+.bar:focus {
+    outline: none !important;
+    border:1px solid white;
+    background-color: black;
+    color: white;
+    box-shadow: -15px -15px 31px #ffffff,15px 15px 31px #cfcfcf;  
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
   }
+img {
+    pointer-events: none;
+    user-select: none;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.drum-pad:hover{
+    transform: scale(1.1);
 }
-
-.App-link {
-  color: #61dafb;
+.drum-pad {
+    font-size: 0;
+    object-fit: cover;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#man{
+    max-height: 50vh;
+    max-width: 40vh;
+    z-index: 99;
+    position: absolute;
+    left: 10%;
+    bottom: 20%;
+}
+#woman{
+    max-height: 50vh;
+    max-width: 38vh;
+    z-index: 99;
+    position: absolute;
+    right:10%;
+    bottom: 20%;
+}
+#people{
+    z-index: 5;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 90vh;
+}
+#fire1{
+    position: absolute;
+    left: 10px;
+    max-width: 15vw;
+    
+}
+#fire2{
+    position: absolute;
+    right: 10px;
+    max-width: 20vw;
+    
+}
+#logo{
+    z-index: 99;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 200px;
+}
+h1{
+    font-size: 20px;
+    pointer-events: none;
+    user-select: none;
+}
+#fin1{
+    z-index: 999;
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    bottom: 50px;
+    left: 50px;  
+}
+#fin2{
+    z-index: 999;
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 50px;
+}
+#fin3{
+    z-index: 999;
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    bottom: 50px;
+    right: 50px;
+}
+.fin1{
+    z-index: 999;
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    bottom: 50px;
+    left: 50px;  
+}
+.fin2{
+    z-index: 999;
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 50px;
+}
+.fin3{
+    z-index: 999;
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    bottom: 50px;
+    right: 50px;
+}
+.dark{
+    background-color: black;
+    color: white;
+    
+}
+@media only screen and (max-width: 1024px) {
+    #people{
+        display: none;
+    }
+    #fire1{
+        display: none;
+    }
+    #fire2{
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+    #woman{
+        display: none;
+    }
+    .bar{
+        max-width: unset;
+        width: 80vw;
+    }
+    #man{
+        left:0;
+        right: 0;
+        max-height: 40vh;
+        margin: auto;
+    }
+    #fin1{
+        display: none;
+    }
+    #fin2{
+        display: none;
+    }
+    #fin3{
+        display: none;
+    }
 }
